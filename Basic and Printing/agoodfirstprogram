@@ -1,0 +1,9 @@
+//
+#include <iostream>
+using namespace std;
+
+int main() {
+  std::cout << "Hello, I am Valerie Siao ";
+  std::cout << "Nice to meet you";
+  std::cout << "Did you finished your lunch?";
+}
