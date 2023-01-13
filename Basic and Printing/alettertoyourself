@@ -1,0 +1,14 @@
+//Basic and Printing A Letter to Yourself Valerie (7 points)
+#include <iostream>
+using namespace std;
+  
+int main() {
+  std::cout << "+--------------------------------------------+\n";
+  std::cout << "|                                        ### |\n";
+  std::cout << "|                                        ### |\n";
+  std::cout << "|              Valerie Siao                  |\n";
+  std::cout << "|              1, Street Road                |\n";
+  std::cout << "|              Town City, Country            |\n";
+  std::cout << "|                                            |\n";
+  std::cout << "+--------------------------------------------+\n";
+}
