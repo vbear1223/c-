@@ -1,0 +1,16 @@
+//Basic and Printing Your Initials Valerie (6 points)
+#include <iostream>
+
+int main() {
+  std::cout << "V                V      SSSSSSSS  \n";
+  std::cout << " V              V       S  \n";
+  std::cout << "  V            V        S\n";
+  std::cout << "   V          V         S \n";
+  std::cout << "    V        V          SSSSSSSS  \n";
+  std::cout << "     V      V                  S  \n";
+  std::cout << "      V    V                   S  \n";
+  std::cout << "       V  V                    S  \n";
+  std::cout << "        V               SSSSSSSS\n"; 
+}
+
+
