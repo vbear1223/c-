@@ -1,0 +1,11 @@
+//Basic and Printing Still Using Variables Valerie (10 points)
+
+#include <iostream> 
+using namespace std;
+int main () {
+    string name;
+    int year;
+    name = "Valerie Siao";
+    year = 2024;
+    cout << "My name is " << name << " and I'll graduate in " << year;
+}
