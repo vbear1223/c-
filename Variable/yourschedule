@@ -1,0 +1,32 @@
+//Basic and Printing Your Schedule Valerie (15 points)
+
+#include <iostream>
+using namespace std;
+int main() {
+    string course1, course2, course3, course4, course5, course6, course7, course8;
+    string teacher1, teacher2, teacher3, teacher4, teacher5, teacher6, teacher7, teacher8; 
+		course1 = "English";
+		course2 = "Maths";
+		course3 = "Java";
+		course4 = "PE";
+		course5 = "Study Hall";
+		course6 = "Art";
+		course7 = "Cooking";
+		course8 = "Swimming";
+		teacher1 = "English Teacher";
+		teacher2 = "Math Teacher";
+		teacher3 = "Java Teacher";
+		teacher4 = "PE Teacher";
+		teacher5 = "Study Hall Teacher";
+		teacher6 = "Art Teacher";
+		teacher7 = "Cooking Teacher";
+		teacher8 = "Swimming Teacher";
+    cout << "1. " << course1 << "     "<< teacher1 << "\n";
+		cout << "2. " << course2 << "       "<< teacher2 << "\n";
+		cout << "3. " << course3 << "        "<< teacher3 << "\n";
+		cout << "4. " << course4 << "     "<< teacher4 << "\n";
+		cout << "5. " << course5 << "  "<< teacher5 << "\n";
+		cout << "6. " << course6 << "    "<< teacher6 << "\n";
+		cout << "7. " << course7 << "    "<< teacher7 << "\n";
+		cout << "8. " << course8 << "    "<< teacher8 << "\n";
+}
