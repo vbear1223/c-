@@ -1,1 +1,128 @@
 
+#include<iostream>
+//generate random numbers based on the system's current time
+#include<ctime>
+using namespace std;
+
+//This creates a board of size 3x3 to represent the game board
+char board[3][3];
+
+//This function initializes the game board by represented '-' character
+void initialize_board() {
+  for(int i=0;i<3;i++) {
+    for(int j=0;j<3;j++) {
+      board[i][j] = '-';
+    }
+  }
+}
+
+//This function prints the current state of the game board to the console
+void print_board() {
+  cout<<"Current Board: "<<endl;
+  for(int i=0;i<3;i++) {
+    for(int j=0;j<3;j++) {
+      cout<<board[i][j]<<" ";
+    }
+    cout<<endl;
+  }
+}
+
+//This function checks whether the game board is full or not
+bool is_board_full() {
+  for(int i=0;i<3;i++) {
+    for(int j=0;j<3;j++) {
+      if(board[i][j]=='-') {
+        return false;
+      }
+    }
+  }
+  return true;
+}
+
+//This function checks whether a given player has won the game by checking the game board (rows, columns and diagonals)
+bool check_for_win(char c) {
+  //check for rows
+  for(int i=0;i<3;i++) {
+    if(board[i][0]==c && board[i][1]==c && board[i][2]==c) {
+      return true;
+    }
+  }
+  
+  //check for columns
+  for(int j=0;j<3;j++) {
+    if(board[0][j]==c && board[1][j]==c && board[2][j]==c) {
+      return true;
+    }
+  }
+  
+  //check for diagonals
+  if(board[0][0]==c && board[1][1]==c && board[2][2]==c) {
+    return true;
+  }
+  
+  if(board[0][2]==c && board[1][1]==c && board[2][0]==c) {
+    return true;
+  }
+  
+  return false;
+}
+
+//This function takes input from the user to make their move by entering the row and column numbers of the cell they want to mark as 'X'
+void player_move() {
+  int row,col;
+  cout<<"Enter the row and column of your move(0 to 2): "<<endl;
+  cin>>row>>col;
+  
+  while(row<0 || row>=3 || col<0 || col>=3 || board[row][col]!='-') {
+    cout<<"Invalid Move. Try Again!"<<endl;
+    cout<<"Enter the row and column of your move: "<<endl;
+    cin>>row>>col;
+  }
+  
+  board[row][col] = 'X';
+}
+
+//Thisfunction generates random row and column values and places an 'O' on the board if the cell is empty.
+void computer_move() {
+  int row,col;
+  srand(time(NULL));
+  row = rand()%3;
+  col = rand()%3;
+  
+  while(board[row][col]!='-') {
+    row = rand()%3;
+    col = rand()%3;
+  }
+  
+  board[row][col] = 'O';
+}
+
+//This function initializes and print the game. The player and computer will move until the board is full or a win is detected
+void play_game() {
+  initialize_board();
+  print_board();
+  
+  while(!is_board_full()) {
+    player_move();
+    print_board();
+    if(check_for_win('X')) {
+      cout<<"Congratulations! You Won!"<<endl;
+      return;
+    }
+    
+    computer_move();
+    print_board();
+    if(check_for_win('O')) {
+      cout<<"Computer Won!"<<endl;
+      return;
+    }
+  }
+  
+  cout<<"It's a Tie!"<<endl;
+}
+
+int main() {
+  play_game();
+  return 0;
+}
+
