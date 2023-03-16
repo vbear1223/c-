@@ -7,13 +7,9 @@ This is a two-player game between a human player and the computer. Players will 
 Program's function
 
 Player makes their move by entering the row and column numbers that they want to mark as 'X'. 
-
 The program then checks whether the move is valid or not, and marks the cell with 'X' if it is.
-
 The computer then makes its move by generating random row and column numbers. Check if the corresponding cell is empty, and mark it with 'O'.
-
 After each move, the program checks the rows, columns, and diagonals of the game board for three consecutive 'X' or 'O' characters and check whether either the human player or the computer has won the game 
-
 The game continues until when the game board is full, tie, or one of the players wins.
 
 
