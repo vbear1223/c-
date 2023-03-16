@@ -2,6 +2,7 @@ Tic Tac Toe
 
 Game rules
 This is a two-player game between a human player and the computer. Players will each place a piece on the 3x3 board. Their aim is to get three in a row before the other does. The row can be horizontal, vertical, or diagonal.
+
 Program's function
 Player makes their move by entering the row and column numbers that they want to mark as 'X'. 
 The program then checks whether the move is valid or not, and marks the cell with 'X' if it is.
